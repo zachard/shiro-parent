@@ -43,6 +43,20 @@
           <groupId>org.slf4j</groupId>
 		  <artifactId>slf4j-log4j12</artifactId>
       </dependency>
+	  <dependency>
+	      <groupId>commons-logging</groupId>
+	      <artifactId>commons-logging</artifactId>
+	  </dependency>
+	  
+	  <!-- mysql -->
+	  <dependency>
+	      <groupId>mysql</groupId>
+	      <artifactId>mysql-connector-java</artifactId>
+	  </dependency>
+	  <dependency>
+	      <groupId>com.alibaba</groupId>
+	      <artifactId>druid</artifactId>
+	  </dependency>
   </dependencies>
   
   <build>

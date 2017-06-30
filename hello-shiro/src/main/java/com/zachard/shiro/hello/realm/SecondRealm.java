@@ -26,13 +26,13 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.realm.Realm;
 
 /**
- * 第一个基于Ini配置文件的Realm安全数据源实现类
+ * 第二个Realm安全数据源实现
  * <p></p>
  *
  * @author zachard
  * @version 1.0.0
  */
-public class FirstIniRealm implements Realm {
+public class SecondRealm implements Realm {
 
 	/**
 	 * 获取Realm的名称
@@ -41,7 +41,7 @@ public class FirstIniRealm implements Realm {
 	 */
 	@Override
 	public String getName() {
-		return "firstIniRealm";
+		return "secondRealm";
 	}
 
 	/**
@@ -75,14 +75,14 @@ public class FirstIniRealm implements Realm {
 		/*
 		 * 这里应该判断用户对象是否为null
 		 */
-		if (!"zachard".equals(username)) {
+		if (!"wang".equals(username)) {
 			throw new UnknownAccountException("用户不存在");
 		}
 		
 		/*
 		 * 这里应该判断用户对象密码与输入是否匹配
 		 */
-		if (!"admin".equals(password)) {
+		if (!"wang".equals(password)) {
 			throw new IncorrectCredentialsException("密码输入错误");
 		}
 		
