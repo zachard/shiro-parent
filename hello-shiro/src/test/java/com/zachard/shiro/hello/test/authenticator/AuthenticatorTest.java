@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.zachard.shiro.hello.test.auth;
+package com.zachard.shiro.hello.test.authenticator;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UnknownAccountException;
