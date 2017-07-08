@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>shiro-parent</groupId>
+    <artifactId>shiro-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>hello-shiro</artifactId>
+  <packaging>war</packaging>
+  <name>hello-shiro</name>
+  <url>http://maven.apache.org</url>
+  <description>shiro入门学习代码</description>
+  
+  <dependencies>
+      <!-- shiro -->
+      <dependency>
+          <groupId>org.apache.shiro</groupId>
+    	  <artifactId>shiro-core</artifactId>
+      </dependency>
+      
+      <!-- web -->
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>jsp-api</artifactId>
+      </dependency>
+      <dependency>
+      	  <groupId>javax.servlet</groupId>
+		  <artifactId>servlet-api</artifactId>
+      </dependency>
+    
+      <!-- junit -->
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <scope>test</scope>
+      </dependency>
+      
+      <!-- log -->
+      <dependency>
+          <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-log4j12</artifactId>
+      </dependency>
+	  <dependency>
+	      <groupId>commons-logging</groupId>
+	      <artifactId>commons-logging</artifactId>
+	  </dependency>
+	  
+	  <!-- mysql -->
+	  <dependency>
+	      <groupId>mysql</groupId>
+	      <artifactId>mysql-connector-java</artifactId>
+	  </dependency>
+	  <dependency>
+	      <groupId>com.alibaba</groupId>
+	      <artifactId>druid</artifactId>
+	  </dependency>
+  </dependencies>
+  
+  <build>
+    <finalName>hello-shiro</finalName>
+  </build>
+  
+</project>
