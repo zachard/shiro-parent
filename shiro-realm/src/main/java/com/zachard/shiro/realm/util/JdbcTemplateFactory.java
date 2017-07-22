@@ -39,7 +39,7 @@ public class JdbcTemplateFactory {
 	/**
 	 * 加载数据库属性对象
 	 */
-	private static ResourceBundle bundle = ResourceBundle.getBundle("jdbc.properties");
+	private static ResourceBundle bundle = ResourceBundle.getBundle("jdbc");
 	
 	/**
 	 * 创建JdbcTemplate的工厂方法
