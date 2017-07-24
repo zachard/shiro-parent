@@ -22,7 +22,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.zachard.shiro.common.test.AbstractTestCase;
+import com.zachard.shiro.realm.AbstractTestCase;
 import com.zachard.shiro.realm.model.Permission;
 import com.zachard.shiro.realm.model.Role;
 import com.zachard.shiro.realm.model.User;

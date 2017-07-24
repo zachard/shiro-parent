@@ -5,4 +5,4 @@
  * @author richard
  *
  */
-package com.zachard.shiro.common.test;
+package com.zachard.shiro.web.servlet;

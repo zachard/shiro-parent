@@ -27,7 +27,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.zachard.shiro.common.test.AbstractTestCase;
+import com.zachard.shiro.realm.AbstractTestCase;
 import com.zachard.shiro.realm.model.Permission;
 import com.zachard.shiro.realm.model.Role;
 import com.zachard.shiro.realm.model.User;
