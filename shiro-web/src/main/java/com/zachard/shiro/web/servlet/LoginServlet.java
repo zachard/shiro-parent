@@ -30,6 +30,7 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -95,8 +96,11 @@ public class LoginServlet extends HttpServlet {
 			req.setAttribute("error", error);
 			req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
 		} else {
-			// 登录成功
-			req.getRequestDispatcher("/WEB-INF/jsp/loginSuccess.jsp").forward(req, resp);
+			// 直接跳转到成功页面(例如: 主页)
+			//req.getRequestDispatcher("/WEB-INF/jsp/loginSuccess.jsp").forward(req, resp);
+			
+			//实现重定向到登录之前的url
+			WebUtils.redirectToSavedRequest(req, resp, "/");
 		}
 	}
 

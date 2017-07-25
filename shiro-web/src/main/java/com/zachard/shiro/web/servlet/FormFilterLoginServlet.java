@@ -35,7 +35,7 @@ import org.apache.shiro.authc.UnknownAccountException;
  * @version 1.0.0
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "formFilterLoginServlet", urlPatterns = "/form/filter/login")
+@WebServlet(name = "formFilterLoginServlet", urlPatterns = "/formfilterlogin")
 public class FormFilterLoginServlet extends HttpServlet {
 	
 	/**
@@ -60,6 +60,13 @@ public class FormFilterLoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String errorClassName = (String) req.getAttribute("shiroLoginFailure");
+//        String username = (String) req.getParameter("username");
+//        String password = (String) req.getParameter("password");
+//        
+//        if (StringUtils.isAnyEmpty(username, password)) {
+//        	req.getRequestDispatcher("/WEB-INF/jsp/formfilterlogin.jsp").forward(req, resp);
+//        	return;
+//        }
 
         if(UnknownAccountException.class.getName().equals(errorClassName)) {
             req.setAttribute("error", "用户名/密码错误");
@@ -68,7 +75,11 @@ public class FormFilterLoginServlet extends HttpServlet {
         } else if(errorClassName != null) {
             req.setAttribute("error", "未知错误：" + errorClassName);
         }
-
+        
+//        String savedUrl = WebUtils.getSavedRequest(req).getRequestUrl();
+//        req.getRequestDispatcher(savedUrl).forward(req, resp);
+        
+        //这里有个bug，不管怎样输入用户名及密码，都只会重定向到登录页面，而不是登录之前的页面
         req.getRequestDispatcher("/WEB-INF/jsp/formfilterlogin.jsp").forward(req, resp);
     }
 
