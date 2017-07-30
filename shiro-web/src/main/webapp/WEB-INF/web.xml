@@ -12,6 +12,7 @@
     <context-param>
         <param-name>shiroEnvironmentClass</param-name>
         <param-value>org.apache.shiro.web.env.IniWebEnvironment</param-value>
+        <!-- <param-value>com.zachard.shiro.web.env.MyIniWebEnvironment</param-value> -->
     </context-param>
     <context-param>
         <param-name>shiroConfigLocations</param-name>
