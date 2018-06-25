@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.zachard.shiro.common.test;
+package com.zachard.shiro.realm;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;

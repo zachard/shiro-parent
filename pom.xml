@@ -112,5 +112,6 @@
     <module>hello-shiro</module>
     <module>shiro-realm</module>
     <module>shiro-common</module>
+    <module>shiro-web</module>
   </modules>
 </project>
